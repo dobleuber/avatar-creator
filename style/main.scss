@@ -1,0 +1,89 @@
+body {
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+    /* Ensures the background covers the entire area */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixed background for a better effect */
+	color: orange;
+    font-size: 16px;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 5rem auto 5rem;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    height: 100vh;
+    background: linear-gradient(90deg, #4404ab, #7b2ff7,  #f1074d);
+}
+
+header {
+    grid-area: header;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main {
+    width: -webkit-fill-available;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    grid-area: main;
+
+}
+
+footer {
+    grid-area: footer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    grid-area: sidebar;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    position: relative;
+    > summary {
+        cursor: pointer;
+        list-style: none;
+    }
+
+    > ul.menu {
+        position: absolute;
+        top: 0%;
+        right: 120%;
+        list-style: none;
+        width: max-content;
+        background-color: #4404ab;
+        border-radius: 0.5rem;
+        padding: 0;
+        margin: 0;
+
+        > li {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-align: left;
+            > a {
+                text-decoration: none;
+                color: orange;
+            }
+
+            &:hover {
+                background-color: #7b2ff7;
+            }
+        }
+
+    }
+}
