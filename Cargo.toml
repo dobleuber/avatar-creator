@@ -20,6 +20,9 @@ wasm-bindgen = "=0.2.92"
 thiserror = "1"
 tracing = { version = "0.1", optional = true }
 http = "1"
+serde = { version = "1", features = ["derive"] }
+server_fn = { features = ["serde-lite", "multipart"] }
+web-sys = { version = "0.3.67", features = ["FileList", "File"] }
 
 [features]
 hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]

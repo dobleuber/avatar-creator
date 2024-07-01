@@ -119,12 +119,15 @@ dependencies = [
  "leptos_axum",
  "leptos_meta",
  "leptos_router",
+ "serde",
+ "server_fn",
  "thiserror",
  "tokio",
  "tower",
  "tower-http",
  "tracing",
  "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]
@@ -1527,6 +1530,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde-lite"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f9e8277ab91a9f0d9ba8d626675f18b456372bccbf642db35d36a8f011ae016c"
+dependencies = [
+ "serde",
+ "serde-lite-derive",
+]
+
+[[package]]
+name = "serde-lite-derive"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7ce26a84e3d8d10853301cf6a75c58132b8f5d5e8fee65949ea8dd7758d6760b"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.68",
+]
+
+[[package]]
 name = "serde-wasm-bindgen"
 version = "0.6.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1639,9 +1663,11 @@ dependencies = [
  "hyper",
  "inventory",
  "js-sys",
+ "multer",
  "once_cell",
  "send_wrapper",
  "serde",
+ "serde-lite",
  "serde_json",
  "serde_qs 0.12.0",
  "server_fn_macro_default",

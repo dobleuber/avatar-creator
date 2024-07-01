@@ -50,6 +50,22 @@ footer {
 aside {
     grid-area: sidebar;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-content: center;
+        justify-items: flex-start;
+
+        .file_upload {
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 .profile {
